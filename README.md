@@ -4,9 +4,7 @@ Using Custom Packages with Pyodide (i.e. packages not part of Pyodide builtin ec
 Website Link: https://mesandipdatta.github.io/DEMO_Pyodide_Custom_Pkg/
 
 
-# Error: 
-
-"Wheel was built with Emscripten v3.1.32 but Pyodide was built with Emscripten v3.1.46"
+Error: "Wheel was built with Emscripten v3.1.32 but Pyodide was built with Emscripten v3.1.46"
 
 // process.js
 // Install the local PyMuPDF wheel
