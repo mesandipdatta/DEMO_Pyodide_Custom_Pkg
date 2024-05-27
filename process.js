@@ -1,6 +1,7 @@
 async function initPyodide() {
     const pyodide = await loadPyodide({
-        indexURL: './pyodide/'
+        //indexURL: './pyodide/'
+        indexURL: "https://cdn.jsdelivr.net/pyodide/v0.25.0/full/"
     });
 
     // Install the local PyMuPDF wheel
