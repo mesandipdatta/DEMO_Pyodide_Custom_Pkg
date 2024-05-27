@@ -4,6 +4,9 @@ async function initPyodide() {
         indexURL: "https://cdn.jsdelivr.net/pyodide/v0.25.0/full/"
     });
 
+    // Load the micropip package
+    await pyodide.loadPackage('micropip');
+
     // Install the local PyMuPDF wheel
     await pyodide.runPythonAsync(`
         import micropip
