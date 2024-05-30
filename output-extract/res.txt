@@ -1,0 +1,15 @@
+highlighting is typically represented as an annotation
+========================================
+From the provided sources, here's a summary of how highlighted text data is stored and how it can
+be extracted:
+========================================
+Sticky Notes vs.
+========================================
+ChatGPT initially used a Microsoft Azure supercomputing infrastructure,
+========================================
+ChatGPT's training data includes software manual pages,
+========================================
+OpenAI "Moderation endpoint" API
+========================================
+OpenAI added support for plugins for
+========================================

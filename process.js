@@ -1,14 +1,23 @@
-import { loadPyodide } from 'pyodide';
+// process.js
 
-async function main() {
-    // Load Pyodide with the custom stdlib URL
-    const pyodide = await loadPyodide({ stdLibURL: "./python_stdlib_patched.zip" });
-
-    // Run Python code using the bundled packages
-    pyodide.runPython(`
-        import mymodule.run
-        mymodule.run.myfunc()
-    `);
+async function loadPyodide() {
+    await languagePluginLoader;
+    console.log('Pyodide loaded successfully.');
 }
 
-main();
+async function callMain() {
+    const pythonCode = `
+        import sys
+        sys.path.append('./py-pkgs')  // Update with your actual path
+        from main import main
+        main()
+    `;
+    
+    await pyodide.runPythonAsync(pythonCode);
+}
+
+document.getElementById('runDemo').addEventListener('click', async () => {
+    await loadPyodide();
+    await callMain();
+    document.getElementById('output').innerText = 'Python code executed successfully.';
+});
