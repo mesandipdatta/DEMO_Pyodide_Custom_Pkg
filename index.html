@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pyodide with PyMuPDF</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
-    <script src="process.js" type="module"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polyglot Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.21.0/full/pyodide.js"></script>
+  <script src="process.js" defer></script>
 </head>
 <body>
-    <h1>Pyodide and PyMuPDF Demo</h1>
-    <button id="runDemo">Run Demo</button>
-    <div id="output"></div>
+  <h1>Polyglot Translator</h1>
+  <input type="text" id="english" placeholder="Type English here..." />
+  <button id="translateButton" disabled>Click</button>
+  <div id="output"></div>
+  <div id="loadingMessage">Loading Pyodide, please wait...</div>
+  <div id="loadingTime" style="margin-top: 20px; font-size: 14px; color: #f7f5f5;"></div>
 </body>
 </html>
