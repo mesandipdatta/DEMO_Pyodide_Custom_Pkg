@@ -1,4 +1,4 @@
-import { loadPyodide } from 'pyodide';
+import { loadPyodide } from './pyodide/pyodide';
 
 async function main() {
     // Load Pyodide with the custom stdlib URL
