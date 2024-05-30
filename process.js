@@ -8,7 +8,7 @@ async function loadPyodide() {
 async function callMain() {
     const pythonCode = `
         import sys
-        sys.path.append('./py-pkgs')  // Update with your actual path
+        sys.path.append('/path/to/py-pkgs')  // Update with your actual path
         from main import main
         main()
     `;
@@ -21,6 +21,3 @@ document.getElementById('runDemo').addEventListener('click', async () => {
     await callMain();
     document.getElementById('output').innerText = 'Python code executed successfully.';
 });
-
-// Import Pyodide using importScripts()
-importScripts('https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js');
