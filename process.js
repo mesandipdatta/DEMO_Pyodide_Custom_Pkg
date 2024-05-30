@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", async () => {
     // Load and initialize Pyodide
     async function main() {
