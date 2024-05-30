@@ -19,5 +19,6 @@ async function callMain() {
 document.getElementById('runDemo').addEventListener('click', async () => {
     await loadPyodide();
     await callMain();
+    console.log('Python code executed successfully.');  // Add this line for debugging
     document.getElementById('output').innerText = 'Python code executed successfully.';
 });
