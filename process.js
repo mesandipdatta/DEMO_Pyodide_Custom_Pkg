@@ -12,7 +12,7 @@ async function callMain() {
         from main import main
         main()
     `;
-    
+
     await pyodide.runPythonAsync(pythonCode);
 }
 
@@ -21,3 +21,6 @@ document.getElementById('runDemo').addEventListener('click', async () => {
     await callMain();
     document.getElementById('output').innerText = 'Python code executed successfully.';
 });
+
+// Import Pyodide using importScripts()
+importScripts('https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js');
