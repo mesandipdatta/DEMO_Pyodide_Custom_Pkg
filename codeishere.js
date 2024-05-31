@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           const completePythonCode = `
   ${pythonCode}
   
-  call_main('${englishText}')
+  main('${englishText}')
           `;
   
           // Run the Python code

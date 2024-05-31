@@ -1,4 +1,4 @@
-def call_main(text):
+def main(text):
     import_libs()
     text = "Hello from Python"
     return text
@@ -21,3 +21,4 @@ def import_libs():
     # Now you can import your dependencies
     import fitz  # pymupdf
 
+print (main("hello"))
