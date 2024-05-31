@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Record the start time
       const startTime = performance.now();
   
+      //=========================================
+      // Load Pyodide
+      // Calculate & Send Loading Time
+      //=========================================
       try {
         console.log("Starting Pyodide load");
         // Load Pyodide
@@ -32,7 +36,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Display the loading time
         loadingTime.innerText = `Pyodide loaded in ${loadTime} milliseconds.`;
         console.log(`Pyodide loaded in ${loadTime} milliseconds.`);
-  
+ 
+        //================================
+        // Start Python Process
+        //================================
         // Fetch the Python code from the main.py file
         const response = await fetch('main.py');
         const pythonCode = await response.text();
@@ -44,10 +51,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   
           // Create a complete Python script to execute
           const completePythonCode = `
-  ${pythonCode}
-  
-  translate_english('${englishText}')
-          `;
+              ${pythonCode}
+              
+              translate_english('${englishText}')
+                      `;
   
           // Run the Python code
           let result = await pyodide.runPythonAsync(completePythonCode);
