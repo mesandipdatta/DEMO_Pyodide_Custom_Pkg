@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   
           // Create a complete Python script to execute
           const completePythonCode = `
-              ${pythonCode}
-              
-              translate_english('${englishText}')
-                      `;
+  ${pythonCode}
+  
+  translate_english('${englishText}')
+          `;
   
           // Run the Python code
           let result = await pyodide.runPythonAsync(completePythonCode);
