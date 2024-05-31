@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const endTime = performance.now();
   
         // Calculate the loading time
-        const loadTime = (endTime - startTime).toFixed(2);
+        const loadTime = (endTime - startTime).toFixed(0);
   
         // Hide loading message and enable the button
         loadingMessage.style.display = "none";
