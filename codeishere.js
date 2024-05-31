@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const pythonCode = await response.text();
   
         // Function to run the Python script
-        async function translateEnglish() {
+        async function callPy() {
           // Get the input value
           let englishText = document.getElementById("english").value;
   
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
   
         // Add event listener to the button
-        translateButton.addEventListener("click", translateEnglish);
+        translateButton.addEventListener("click", callPy);
   
       } catch (error) {
         // Handle errors in loading Pyodide
