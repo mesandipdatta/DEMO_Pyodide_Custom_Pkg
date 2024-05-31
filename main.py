@@ -1,6 +1,4 @@
 def call_main(text):
-    # Replace this function with the actual translation logic
-    # pirate_speak = text.replace("hello", "ahoy").replace("my", "me")
     import_libs()
     text = "Hello from Python"
     return text
@@ -22,3 +20,4 @@ def import_libs():
 
     # Now you can import your dependencies
     import fitz  # pymupdf
+
